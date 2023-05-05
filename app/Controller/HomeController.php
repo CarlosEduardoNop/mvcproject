@@ -9,11 +9,17 @@ class HomeController
     public function index()
     {
         try {
+            $userId = 50;
+            $userName = 'Welinton Ferreira';
+            $usersRegistered = 4356;
+
             return new Response(
                 200,
                 View::render('home', [
-                    'teste' => "Isso é um teste"
-                ], 'Titulo teste')
+                    'userId' => $userId,
+                    'userName' => $userName,
+                    'usersRegistered' => $usersRegistered
+                ], 'Início')
             );
         } catch (\Exception $e) {
             return new Response(
