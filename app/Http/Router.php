@@ -31,6 +31,16 @@ class Router
         return $this->addRoute('POST', $route, $params);
     }
 
+    public function put($route, $params = [])
+    {
+        return $this->addRoute('PUT', $route, $params);
+    }
+
+    public function delete($route, $params = [])
+    {
+        return $this->addRoute('DELETE', $route, $params);
+    }
+
     private function setPrefix()
     {
         $parsedUrl = parse_url($this->url);

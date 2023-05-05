@@ -51,7 +51,7 @@ class View
         return str_replace($keys, array_values($vars), $contentView);
     }
 
-    private static function mountHeaderAndFooter($vars, $contentView)
+    private static function mountHeaderAndFooter()
     {
         $header = file_exists(self::HEADER_PATH) ? file_get_contents(self::HEADER_PATH) : '';
         $footer = file_exists(self::FOOTER_PATH) ? file_get_contents(self::FOOTER_PATH) : '';
